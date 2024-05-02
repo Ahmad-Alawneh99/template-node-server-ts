@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const rewire = require('rewire');
-const requestService = rewire('./requestService.js');
+const requestService = rewire('./requestService');
 
 describe('requestService', () => {
 	describe('handleRequest', () => {

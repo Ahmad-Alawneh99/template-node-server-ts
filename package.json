@@ -4,7 +4,8 @@
   "description": "Template for a simple node server",
   "main": "server.js",
   "scripts": {
-    "dev": "node --watch src/server.js",
+    "build": "tsc",
+    "dev": "npm run build && node --watch dist/server.js",
     "start": "node src/server.js",
     "test": "nyc mocha",
     "eslint": "eslint src/**",
@@ -16,6 +17,8 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.15",
     "@stylistic/eslint-plugin-js": "^1.0.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.8",
     "chai": "^4.3.10",
     "eslint": "^8.53.0",
     "eslint-plugin-import": "^2.29.0",

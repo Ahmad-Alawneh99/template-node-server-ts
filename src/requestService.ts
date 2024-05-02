@@ -2,14 +2,14 @@ const handleRequest = async (req, res, next, callback) => {
 	return new Promise((resolve) => {
 		try {
 			callback()
-				.then(() => resolve())
+				.then(() => resolve(''))
 				.catch((error) => {
 					next(error);
-					resolve();
+					resolve('');
 				});
 		} catch (error) {
 			next(error);
-			resolve();
+			resolve('');
 		}
 	});
 };
