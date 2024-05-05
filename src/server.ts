@@ -16,6 +16,7 @@ app.get('/', async (req, res, next) => {
 	});
 });
 
+// This needs to be the last 'app.use' in the file for the error handler to work properly
 app.use(requestService.handleGenericError);
 
 app.listen(port, () => {
