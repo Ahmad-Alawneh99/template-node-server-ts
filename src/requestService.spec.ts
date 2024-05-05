@@ -1,6 +1,8 @@
-/* eslint-disable no-undef */
-const rewire = require('rewire');
-const requestService = rewire('./requestService.js');
+import { expect } from 'chai';
+import rewire from 'rewire';
+import sinon from 'sinon';
+
+const requestService = rewire('./requestService');
 
 describe('requestService', () => {
 	describe('handleRequest', () => {

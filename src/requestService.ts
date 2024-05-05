@@ -1,34 +1,28 @@
-const handleRequest = async (req, res, next, callback) => {
+export const handleRequest = async (req, res, next, callback) => {
 	return new Promise((resolve) => {
 		try {
 			callback()
-				.then(() => resolve())
+				.then(() => resolve(undefined))
 				.catch((error) => {
 					next(error);
-					resolve();
+					resolve(undefined);
 				});
 		} catch (error) {
 			next(error);
-			resolve();
+			resolve(undefined);
 		}
 	});
 };
 
-const logRequest = (req, res, next) => {
+export const logRequest = (req, res, next) => {
 	console.log(`Calling '${req.path}'. Method: ${req.method}`);
 
 	next();
 };
 
-// eslint-disable-next-line no-unused-vars
-const handleGenericError = (err, req, res, next) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const handleGenericError = (err, req, res, next) => {
 	console.error(`an error has occurred while calling '${req.path}'`, err);
 
 	return res.status(500).send({ error: true, code: 500, message: err.message });
-};
-
-module.exports = {
-	handleRequest,
-	logRequest,
-	handleGenericError,
 };
