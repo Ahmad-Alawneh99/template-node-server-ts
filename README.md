@@ -1,6 +1,6 @@
-# template-node-server
+# template-node-server-ts
 
-* A simple nodeJS express server configured with ESLint and unit tests
+* A simple nodeJS express server configured with ESLint and unit tests. Now in typescript
 
 ## Features
 

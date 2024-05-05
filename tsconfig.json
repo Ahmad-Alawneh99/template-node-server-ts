@@ -2,9 +2,11 @@
     "compilerOptions": {
       "target": "ES6",
       "outDir": "./dist",
-      "allowJs": true,
       "moduleResolution": "NodeNext",
-      "module": "NodeNext"
+      "module": "NodeNext",
+      "esModuleInterop": true,
+      "strictNullChecks": true,
     },
-    "include": ["./src/**/*.ts"] // Specify the path to your TypeScript files
+    "include": ["./src/**/*.ts", "./mochaConfig.ts"],
+    "exclude": ["node_modules"]
 }
