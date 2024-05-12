@@ -1,8 +1,8 @@
 {
-  "name": "template-node-server",
+  "name": "template-node-server-ts",
   "version": "1.0.0",
-  "description": "Template for a simple node server",
-  "main": "server.js",
+  "description": "Template for a simple node server in typescript",
+  "main": "src/server.ts",
   "scripts": {
     "build": "tsc",
     "dev": "npm run build && node --watch dist/src/server.js",
