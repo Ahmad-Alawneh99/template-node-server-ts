@@ -38,6 +38,7 @@
 		"@stylistic/js/block-spacing": "error",
 		"@stylistic/js/space-infix-ops": ["error"],
 		"@stylistic/js/space-before-blocks": ["error"],
+		"@stylistic/js/key-spacing": ["error"],
 		"@typescript-eslint/no-non-null-assertion": ["error"],
 		"@typescript-eslint/prefer-optional-chain": "error",
 		"@typescript-eslint/no-explicit-any": "warn",
